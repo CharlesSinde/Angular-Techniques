@@ -1,0 +1,6 @@
+<ngc-ver2c1  (click)="onHidden($event)"></ngc-ver2c1>
+<div [hidden]="isHidden" (onHidden)="onHidden($event)">
+  I am a Div Tag which has a child component in the form of a button. <br>
+  When you press the button, the child creates an event emitter <br>
+  which the parent listens to and unhides the div.
+</div>
