@@ -7,8 +7,12 @@ import { ChildExComponent } from './child-ex.component';
 
 
 const routes: Routes = [
-  { path: 'childroute', component: ChildExComponent},
-  { path: 'secondchild', component: SecondChildRouteComponent},
+  { path: 'childroute', component: ChildExComponent,
+    children : [ 
+        {path: 'firstchild', component : FirstChildRouteComponent},
+        {path: 'secondchild', component: SecondChildRouteComponent}
+    ]
+  }
 ];
 
 @NgModule({

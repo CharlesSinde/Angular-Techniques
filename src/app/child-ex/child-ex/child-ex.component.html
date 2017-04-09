@@ -5,3 +5,8 @@
 <h2>A: If you are importing a lot of feature from a module, it is easier to use their own router with the hooekd in routes,
   rather than having to constantly add the new routes to app-routing.module.(or remove)
 </h2>
+      <ul>
+        <li class="firstchild" routerLinkActive="acive"><a routerLink="./firstchild">First Child</a></li>
+        <li class="secondchild" routerLinkActive="acive"><a routerLink="./secondchild">Second Child</a></li>
+      </ul>
+      <router-outlet></router-outlet>
