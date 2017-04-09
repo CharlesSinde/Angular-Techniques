@@ -1,3 +1,11 @@
-<p>
-  routing-ex works!
-</p>
+    <h1>Routing Example!</h1>
+    <h2>This page was routed using the normal routing module</h2>
+    <h2>Below is a link which will take you to "firstchild" that will be routed using a different module.</h2>
+    <h2> "child-ex.routing.module.ts"</h2>
+    <h2>**In app.module.ts make sure you load the new routing modules before app-routing.module!</h2>
+    <div>
+      <ul>
+        <li class="childroute" routerLinkActive="acive"><a routerLink="/childroute">Child Route</a></li>
+      </ul>
+      <router-outlet ></router-outlet>
+    </div>
