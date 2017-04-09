@@ -13,6 +13,8 @@ import { Ver3c1Component } from './components-ex/ver3/ver3c1/ver3c1.component';
 import { V3ServiceService } from 'app/components-ex/ver3/services/v3-service.service';
 import { ComponentsExComponent } from './components-ex/components-ex/components-ex.component';
 import { StyleExComponent } from './style-ex/style-ex/style-ex.component';
+import { HomeComponent } from './home/home.component';
+import { RoutingExComponent } from './routing-ex/routing-ex.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { StyleExComponent } from './style-ex/style-ex/style-ex.component';
     Ver3Component,
     Ver3c1Component,
     ComponentsExComponent,
-    StyleExComponent
+    StyleExComponent,
+    HomeComponent,
+    RoutingExComponent
   ],
   imports: [
     BrowserModule,
