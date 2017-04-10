@@ -12,7 +12,14 @@ export class Ver2Component implements OnInit {
   ngOnInit() {
   }
   onHidden(hidder: boolean) {
-    this.isHidden = false;
-    console.log("hellor");
+    if(this.isHidden == false)
+    {
+      this.isHidden = true;
+    }
+    else
+    {
+      this.isHidden = false;
+    }
+    
   }
 }

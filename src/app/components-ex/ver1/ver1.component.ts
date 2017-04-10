@@ -7,14 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ver1Component implements OnInit {
 isHidden: boolean = true;
-  constructor() { 
-  }
+  constructor() {}
 
   ngOnInit() {
  
   }
 setVisible(){
+  if(this.isHidden == true)
+  {
   this.isHidden = false;
+  }
+  else
+  {
+    this.isHidden = true;
+  }
 }
 }
 

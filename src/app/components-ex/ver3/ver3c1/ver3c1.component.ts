@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Subscription }  from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 import { V3ServiceService } from 'app/components-ex/ver3/services/v3-service.service';
 
 
@@ -9,7 +9,6 @@ import { V3ServiceService } from 'app/components-ex/ver3/services/v3-service.ser
   styleUrls: ['./ver3c1.component.css']
 })
 export class Ver3c1Component implements OnInit {
-  @Input() astronaut: string;
   hidden = true;
   subscription: Subscription;
   constructor(private v3Service: V3ServiceService) {}
@@ -17,7 +16,14 @@ export class Ver3c1Component implements OnInit {
   ngOnInit() {
   }
 
-  updateHidden(){
-    this.v3Service.setHiddenValue(false)
+  updateHidden() {
+    if(this.v3Service.hider == true)
+    {
+      this.v3Service.instHiddenValue(false);
+    }
+    else{
+      this.v3Service.instHiddenValue(true);
+    }
+
   }
 }

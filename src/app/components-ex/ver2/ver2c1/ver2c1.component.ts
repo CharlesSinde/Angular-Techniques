@@ -8,15 +8,12 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 export class Ver2c1Component implements OnInit {
 
 @Output() onHide = new EventEmitter<boolean>();
-  constructor() { 
-  }
+  constructor() {}
 
   ngOnInit() {
- 
   }
   onHidden(Hider: boolean) {
     this.onHide.emit(Hider);
-    console.log(Hider);
   }
 
 }
