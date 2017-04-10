@@ -16,6 +16,8 @@ import { StyleExComponent } from './style-ex/style-ex/style-ex.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingExComponent } from './routing-ex/routing-ex.component';
 import { ChildExModule } from './child-ex/child-ex/child-ex.module';
+import { TestingComponent } from './testing/testing.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ChildExModule } from './child-ex/child-ex/child-ex.module';
     ComponentsExComponent,
     StyleExComponent,
     HomeComponent,
-    RoutingExComponent
+    RoutingExComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,

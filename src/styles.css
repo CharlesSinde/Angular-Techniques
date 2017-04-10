@@ -6,7 +6,9 @@ body {
   padding: 0;
   background: #ccc;
 }
- 
+ .font-styling-global{
+    font-size:1.5em;
+}
 .nav ul {
   list-style: none;
   background-color: #444;
