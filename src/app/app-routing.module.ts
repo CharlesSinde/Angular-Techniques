@@ -5,6 +5,7 @@ import { StyleExComponent } from './style-ex/style-ex/style-ex.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingExComponent } from './routing-ex/routing-ex.component';
 import { TestingComponent } from './testing/testing.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 const routes: Routes = [ 
   { path: '', pathMatch:'full', redirectTo: '/home'  },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'routing', component: RoutingExComponent,},
   { path: 'styles', component: StyleExComponent},
   { path: 'testing', component: TestingComponent},
+  { path: 'observs', component: ObservablesComponent},
   { path: 'lazyrouter', loadChildren: 'app/lazy-router/lazy-router.module#LazyRouterModule'},
   { path: '**', pathMatch: 'full', redirectTo: '/home' }
    // children: []

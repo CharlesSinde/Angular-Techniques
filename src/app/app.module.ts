@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { RoutingExComponent } from './routing-ex/routing-ex.component';
 import { ChildExModule } from './child-ex/child-ex/child-ex.module';
 import { TestingComponent } from './testing/testing.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TestingComponent } from './testing/testing.component';
     StyleExComponent,
     HomeComponent,
     RoutingExComponent,
-    TestingComponent
+    TestingComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
