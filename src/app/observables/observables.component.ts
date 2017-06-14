@@ -29,8 +29,8 @@ containter: Observable<ISWData>;
       .do(thing => console.log(thing))
       .map((data: { name: string }) => data.name)
       .catch((err) => {
-        console.error('handling error within poll1()', err);
-        const fakeData = [{ name: 'no phones could be loaded' }];
+        console.error('handling error within swapi get()', err);
+        const fakeData = [{ name: 'no swapi info available' }];
         return Observable.of(fakeData);
       });
 
