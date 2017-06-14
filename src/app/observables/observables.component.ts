@@ -20,6 +20,7 @@ import { ISWData } from './data-format';
 
 export class ObservablesComponent implements OnInit {
 name: Observable<string>;
+time: Observable<number>;
 containter: Observable<ISWData>;
 
   constructor(http: Http) {
@@ -32,6 +33,19 @@ containter: Observable<ISWData>;
         const fakeData = [{ name: 'no phones could be loaded' }];
         return Observable.of(fakeData);
       });
+
+          this.time = new Observable<number>((observer: Observer<number>) => {
+      console.log('Subscribing to time');
+      let handle = setInterval(() => {
+        console.log('emitting time');
+        observer.next(new Date().getTime() % 10000);
+      }, 100);
+      // stop interval on unsubscribe
+      return function () {
+        console.log('Unsubscribing to time');
+        clearInterval(handle);
+      };
+    })
   }
 
   ngOnInit() {
