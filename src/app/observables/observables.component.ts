@@ -56,4 +56,8 @@ containter: Observable<ISWData>;
      return  ranNum.toString();
   }
 
+  reloadPage(){
+    location.reload(false); 
+  }
+
 }
