@@ -11,6 +11,7 @@ import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/catch';
 
 import { ISWData } from './data-format';
+import { SwapiService } from './swapi.service';
 
 @Component({
   selector: 'ngc-observables',
@@ -23,18 +24,10 @@ name: Observable<string>;
 time: Observable<number>;
 containter: Observable<ISWData>;
 
-  constructor(http: Http) {
-    this.name = http.get('http://swapi.co/api/people/' + this.randomNumber() + '/', RequestHeaders)
-      .map((res: Response) => res.json())
-      .do(thing => console.log(thing))
-      .map((data: { name: string }) => data.name)
-      .catch((err) => {
-        console.error('handling error within swapi get()', err);
-        const fakeData = [{ name: 'no swapi info available' }];
-        return Observable.of(fakeData);
-      });
-
-          this.time = new Observable<number>((observer: Observer<number>) => {
+  constructor(http: Http,
+              private swapiService: SwapiService
+  ) {
+    this.time = new Observable<number>((observer: Observer<number>) => {
       console.log('Subscribing to time');
       let handle = setInterval(() => {
         console.log('emitting time');
@@ -49,6 +42,7 @@ containter: Observable<ISWData>;
   }
 
   ngOnInit() {
+    this.getName();
   }
 
   randomNumber (){
@@ -57,7 +51,25 @@ containter: Observable<ISWData>;
   }
 
   reloadPage(){
-    location.reload(false); 
+    location.reload(false);
+  }
+
+  getName(){
+    this.swapiService.getPerson()
+      .subscribe(
+        res => this.handleData(res),
+        err => this.handleError(err)
+      );
+  }
+
+  handleData(data: ISWData){
+    (<HTMLInputElement>document.getElementById('name')).textContent = data.name;
+    (<HTMLInputElement>document.getElementById('height')).textContent = data.height;
+  }
+
+  handleError(err){
+    (<HTMLInputElement>document.getElementById('name')).textContent = 'failed';
+    (<HTMLInputElement>document.getElementById('height')).textContent = 'failed';
   }
 
 }

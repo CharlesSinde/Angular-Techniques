@@ -1,5 +1,12 @@
  <h1>Observables Examples!</h1>
- <h2> {{ name | async }} </h2>
-<div> {{ time | async }}</div>
 
- <button (click)="reloadPage()">Give Me Another!</button>
+ Constant Observable Example streaming from typescript file: {{ time | async }}
+
+ <h2>Data mapped from Swapi API</h2>
+<div>
+Name: <a id="name" ></a>
+</div>
+<div>
+Height: <a id="height"></a>
+</div>
+    <button (click)="getName()">Give Me Another!</button>

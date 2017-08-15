@@ -18,6 +18,7 @@ import { RoutingExComponent } from './routing-ex/routing-ex.component';
 import { ChildExModule } from './child-ex/child-ex/child-ex.module';
 import { TestingComponent } from './testing/testing.component';
 import { ObservablesComponent } from './observables/observables.component';
+import { SwapiService } from 'app/observables/swapi.service';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { ObservablesComponent } from './observables/observables.component';
     ChildExModule,
     AppRoutingModule,
   ],
-  providers: [V3ServiceService],
+  providers: [V3ServiceService,SwapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
