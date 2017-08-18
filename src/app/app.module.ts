@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,7 @@ import { ChildExModule } from './child-ex/child-ex/child-ex.module';
 import { TestingComponent } from './testing/testing.component';
 import { ObservablesComponent } from './observables/observables.component';
 import { SwapiService } from 'app/observables/swapi.service';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -34,11 +35,13 @@ import { SwapiService } from 'app/observables/swapi.service';
     HomeComponent,
     RoutingExComponent,
     TestingComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     ChildExModule,
     AppRoutingModule,
