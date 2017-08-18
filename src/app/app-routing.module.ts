@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { RoutingExComponent } from './routing-ex/routing-ex.component';
 import { TestingComponent } from './testing/testing.component';
 import { ObservablesComponent } from './observables/observables.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [ 
   { path: '', pathMatch:'full', redirectTo: '/home'  },
   { path: 'home', component: HomeComponent},
   { path: 'components', component: ComponentsExComponent},
   { path: 'routing', component: RoutingExComponent,},
+  { path: 'forms', component: ReactiveFormComponent},
   { path: 'styles', component: StyleExComponent},
   { path: 'testing', component: TestingComponent},
   { path: 'observs', component: ObservablesComponent},

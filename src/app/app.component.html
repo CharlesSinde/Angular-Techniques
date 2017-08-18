@@ -1,18 +1,52 @@
-  <header>
+  <!-- <header>
     <div class="nav">
       <ul>
         <li class="Home" routerLinkActive="acive"><a routerLink="/home">Home</a></li>
         <li class="Components" routerLinkActive="acive"><a routerLink="/components">Components</a></li>
         <li class="Styling" routerLinkActive="active"><a  routerLink="/styles">Styling</a></li>
         <li class="Routing" routerLinkActive="active"><a routerLink="/routing">Routing</a></li>
-        <li class="Observs" routerLinkActive="active"><a routerLink="/observs">Observs</a></li>
-        <li class="Testing" routerLinkActive="active"><a routerLink="/testing">Testing</a></li>
+        <li class="Observs" routerLinkActive="active"><a routerLink="/observs">Observables</a></li>
+        <li class="forms" routerLinkActive="active"><a routerLink="/forms">ReactiveForms</a></li>
         <li class="Lazy Loading" routerLinkActive="active"><a routerLink="/lazyrouter">lazyrouter</a></li>
       </ul>
     </div>
   </header>
-  <br>
-  <router-outlet></router-outlet>
+  <br> -->
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <img src='../assets/angular2.png' height="50" width="100">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="navbar-brand" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="navbar-brand" routerLink="/components">Components</a>
+        </li>
+        <li class="nav-item ">
+          <a  class="navbar-brand" routerLink="/styles">Styling</a>
+        </li>
+        <li class="nav-item ">
+          <a  class="navbar-brand" routerLink="/routing">Routing</a>
+        </li>
+        <li class="nav-item ">
+          <a class="navbar-brand" routerLink="/observs">Observables</a>
+        </li>
+        <li class="nav-item ">
+          <a class="navbar-brand" routerLink="/forms">ReactiveForms</a>
+        </li>
+        <li class="nav-item ">
+          <a  class="navbar-brand" routerLink="/lazyrouter">lazyrouter</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
   
 
